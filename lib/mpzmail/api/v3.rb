@@ -25,9 +25,9 @@ module Mpzmail
       end
 
       def subscribers_addsubscribers(options = {})
-        options = setup_options(options, %w( groupId ))
+        options = setup_options(options, %w( groupID ))
         options = self.class.get_xml(options)
-        self.class.post('/api/v3.0/groups/addGroup/', body: options)
+        self.class.post('/api/v3.0/subscribers/addSubscribers/', body: options)
       end
 
       def self.auth(username, password)
